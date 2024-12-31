@@ -30,23 +30,13 @@ cd article-recommender
 ```
 ### 2️⃣ Install Dependencies
 ```bash
-pip install -r requirements.txt
+pip install "all libraries inside the scripts"
 ```
-### 3️⃣ Setup the Database
-Install and configure PostgreSQL.
-Create a database and populate it using the script provided:
-```bash
-python populate_database.py
-```
+### 3️⃣ Dataset
+- Install and configure PostgreSQL.
+- Create a database and delete all null values from it and unite the rows under three columns **id**,**title**,**publisher**,**link**
+- You must acquire your username , password , database_name , host , port `default value =5432`
 ### 4️⃣ Generate Embeddings
-To generate embeddings for your dataset:
-```bash
-python embed_articles.py
-```
-Note: The embeddings and database files were not uploaded due to GitHub's file size restrictions. Use the provided scripts to generate them.
+To generate embeddings for your dataset: run the `embedding model usage.py` to embed your dataset articles
+**Note: The embeddings and database files were not uploaded due to GitHub's file size restrictions. Use the provided scripts to generate them.**
 
-### 5️⃣ Run the Application
-```bash
-flask run
-```
-Access the app at http://localhost:5000.
