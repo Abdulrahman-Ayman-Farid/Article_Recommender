@@ -27,3 +27,26 @@ Welcome to the **AI-Powered Article Recommender System**! This project combines 
 ```bash
 git clone https://github.com/your-username/article-recommender.git
 cd article-recommender
+```
+### 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 3️⃣ Setup the Database
+Install and configure PostgreSQL.
+Create a database and populate it using the script provided:
+```bash
+python populate_database.py
+```
+### 4️⃣ Generate Embeddings
+To generate embeddings for your dataset:
+```bash
+python embed_articles.py
+```
+Note: The embeddings and database files were not uploaded due to GitHub's file size restrictions. Use the provided scripts to generate them.
+
+### 5️⃣ Run the Application
+```bash
+flask run
+```
+Access the app at http://localhost:5000.
