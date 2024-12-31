@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Recommender</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>You are reading...</h1>
+        {% if selected_article %}
+        <div class="article">
+            <h2>{{ selected_article.title }}</h2>
+            <p>Publisher: {{ selected_article.publisher }}</p>
+        </div>
+        <h2>You might also like...</h2>
+        <ul class="recommendations">
+            {% for article in similar_articles %}
+            <li>
+                <a href="{{ article.link }}" target="_blank">{{ article.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Please select an article to read.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

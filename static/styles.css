@@ -1,0 +1,148 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    min-width: 150px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.results h2 {
+    color: #444;
+    text-align: center;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.results li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.results a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.results a:hover {
+    text-decoration: underline;
+}
+
+.results p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+form input[type="text"] {
+    flex: 2;
+}
+
+form select {
+    flex: 1;
+    min-width: 150px; /* Ensure dropdown isn't too large */
+}
+
+form button {
+    flex: 0;
+}
+#loading-message {
+    display: none;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+#loading-message::after {
+    content: " ...";
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: " ...";
+    }
+    40% {
+        content: " .";
+    }
+    60% {
+        content: " ..";
+    }
+    80%, 100% {
+        content: " ...";
+    }
+}

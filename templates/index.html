@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Recommender</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Article Recommender</h1>
+        <form method="POST">
+            <input type="text" name="query" placeholder="Enter your query" value="{{ query }}">
+            <select name="publisher">
+                <option value="">All Publishers</option>
+                {% for publisher in publishers %}
+                <option value="{{ publisher }}" {% if publisher == selected_publisher %}selected{% endif %}>
+                    {{ publisher }}
+                </option>
+                {% endfor %}
+            </select>
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        {% if recommendations %}
+        <div class="results">
+            <h2>Recommended Articles:</h2>
+            <ul>
+                {% for article in recommendations %}
+                <li>
+                    <a href="{{ article.link }}" target="_blank">{{ article.title }}</a>
+                    <p>Publisher: {{ article.publisher }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
