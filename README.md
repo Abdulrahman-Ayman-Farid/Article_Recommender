@@ -2,8 +2,6 @@
 
 Welcome to the **AI-Powered Article Recommender System**! This project combines cutting-edge **Natural Language Processing (NLP)** techniques with a sleek web interface to provide personalized article recommendations based on user queries. 
 
-🔗 **[Check out the live demo](#)** *(Add link if deployed)*
-
 ---
 
 ## 📚 Features
